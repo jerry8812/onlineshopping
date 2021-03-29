@@ -1,30 +1,21 @@
 <template>
   <div id="app">
-    {{test}}
+    
   </div>
 </template>
 
 <script>
 
-import {request} from './network/request'
-
-export default {
-  name: 'App',
-  data() {
-    return {
-      test: ''
+  export default {
+    name: 'App',
+    data() {
+      return {
+        
+      }
     }
-  },
-  created() {
-    request({
-      url: '/test/findAll'
-    }).then(res => {
-      this.test = res.data
-    })
   }
-}
 </script>
 
 <style>
-
+  @import "assets/css/base.css";
 </style>
