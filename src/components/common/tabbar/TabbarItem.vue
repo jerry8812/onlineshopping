@@ -44,14 +44,14 @@
   .tabbarItem {
     flex: 1;
     text-align: center;
-    height: 2.9rem;
+    height: 2.7rem;
     font-size: 13px;
     color:rgb(51, 47, 47);
   }
 
   .tabbarItem img {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.4rem;
+    height: 1.4rem;
     margin-top: 2px;
     vertical-align: middle;
     margin-bottom: 3px;
