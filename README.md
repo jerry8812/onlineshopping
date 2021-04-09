@@ -1,19 +1,26 @@
-# onlineshopping
+# Overall
+This vue project is the frontend of fullstack online shopping mall, please check out the server side: https://github.com/jerry8812/fullstack-shoppingmall
 
-## Project setup
-```
-npm install
-```
+# Core Libraries
+Vue Router, Vuex, Axios, Bootstrap-vue
 
-### Compiles and hot-reloads for development
+# Structure
+``` 
+─src  -- source code
+    ├─api --axios HTTP request
+    ├─assets  --store all the assets, including css file and images
+    │  ├─css  --global css file
+    │  └─image
+    ├─components
+    │  ├─common  --common components
+    │  └─content
+    ├─plugins  --bootstrap
+    ├─router  --Vue Router
+    ├─store  -- manage vuex
+    ├─util  --util
+    └─views
+        ├─profile  --profile of current user
+        ├─cart  -- shopping cart
+        ├─category  --category page
+        └─home  --home page
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
