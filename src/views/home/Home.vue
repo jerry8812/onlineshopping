@@ -4,21 +4,21 @@
       <div slot="navbar-middle">Shopping Mall</div>
     </nav-bar>
 
-    <b-carousel controls indicators img-width="100%">
-      <b-carousel-slide v-for="(url, index) in this.banner" :key="index" :img-src=url></b-carousel-slide>
-    </b-carousel>
+    <slider :banner="this.banner"></slider>
   </div>
 </template>
 
 <script>
 
   import NavBar from "components/common/navbar/NavBar"
+  import Slider from "components/common/slider/Slider"
   import {getBanner} from 'api/home' 
 
   export default {
     name: "Home",
     components: {
-      NavBar
+      NavBar,
+      Slider
     },
     data() {
       return {
