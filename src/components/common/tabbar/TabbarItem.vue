@@ -44,7 +44,7 @@
   .tabbarItem {
     flex: 1;
     text-align: center;
-    height: 2.7rem;
+    height: 2.8rem;
     font-size: 13px;
     color:rgb(51, 47, 47);
   }
@@ -54,7 +54,7 @@
     height: 1.4rem;
     margin-top: 2px;
     vertical-align: middle;
-    margin-bottom: 3px;
+    margin-bottom: 1px;
   }
 
 </style>

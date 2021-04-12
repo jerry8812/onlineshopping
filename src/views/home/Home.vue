@@ -5,10 +5,7 @@
     </nav-bar>
 
     <b-carousel controls indicators img-width="100%">
-      <b-carousel-slide img-src="https://picsum.photos/1024/488/?image=10"></b-carousel-slide>
-      <b-carousel-slide img-src="https://picsum.photos/1024/488/?image=11"></b-carousel-slide>
-      <b-carousel-slide img-src="https://picsum.photos/1024/488/?image=12"></b-carousel-slide>
-      <b-carousel-slide img-src="https://picsum.photos/1024/488/?image=13"></b-carousel-slide>
+      <b-carousel-slide v-for="(url, index) in this.banner" :key="index" :img-src=url></b-carousel-slide>
     </b-carousel>
   </div>
 </template>
@@ -16,16 +13,21 @@
 <script>
 
   import NavBar from "components/common/navbar/NavBar"
-  import {getTestData} from 'api/home' //for testing
+  import {getBanner} from 'api/home' 
 
   export default {
     name: "Home",
     components: {
       NavBar
     },
+    data() {
+      return {
+        banner: []
+      }
+    },
     created() {
-      getTestData().then(res => {
-        console.log(res);
+      getBanner().then(res => {
+        this.banner = res.data
       })
     }
   }

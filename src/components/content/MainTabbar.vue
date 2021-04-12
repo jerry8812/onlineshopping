@@ -15,8 +15,8 @@
         <img slot="item-icon-active" src="~assets/image/tabbar/cart_active.svg" alt="Cart_active">
         <div slot="item-text">Cart</div>
     </tabbar-item>
-    <tabbar-item path="/account">
-        <img slot="item-icon" src="~assets/image/tabbar/account.svg" alt="Account">
+    <tabbar-item path="/profile">
+        <img slot="item-icon" src="~assets/image/tabbar/account.svg" alt="Profile">
         <img slot="item-icon-active" src="~assets/image/tabbar/account_active.svg" alt="Account_active">
         <div slot="item-text">Account</div>
     </tabbar-item>
