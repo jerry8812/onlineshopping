@@ -7,9 +7,16 @@ export function getTestData() {
   })
 }
 
-export function getBanner() {
+export function getBannerImages() {
   return request({
     url: "images/banner",
+    method: 'get'
+  })
+}
+
+export function getRecommendationImages() {
+  return request({
+    url: 'images/recommendation',
     method: 'get'
   })
 }

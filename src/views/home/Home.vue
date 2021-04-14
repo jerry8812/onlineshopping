@@ -3,31 +3,37 @@
     <nav-bar class="home-nav">
       <div slot="navbar-middle">Shopping Mall</div>
     </nav-bar>
-
-    <slider :banner="this.banner"></slider>
+    <b-carousel>
+      <b-carousel-slide v-for="(image, index) in this.banners" :key="index" :img-src="image.url"></b-carousel-slide>
+    </b-carousel>
+    <recommendation-view :recommendations="recommendations"></recommendation-view>
   </div>
 </template>
 
 <script>
 
-  import NavBar from "components/common/navbar/NavBar"
-  import Slider from "components/common/slider/Slider"
-  import {getBanner} from 'api/home' 
+  import NavBar from "components/common/navbar/NavBar";
+  import recommendationView from './childComponents/RecommendationView';
+  import {getBannerImages, getRecommendationImages} from 'api/home' ;
 
   export default {
     name: "Home",
     components: {
       NavBar,
-      Slider
+      recommendationView
     },
     data() {
       return {
-        banner: []
+        banners: [],
+        recommendations: []
       }
     },
     created() {
-      getBanner().then(res => {
-        this.banner = res.data
+      getBannerImages().then(res => {
+        this.banners = res.data
+      }),
+      getRecommendationImages().then(res => {
+        this.recommendations = res.data
       })
     }
   }
