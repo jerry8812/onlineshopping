@@ -5,7 +5,7 @@
     </nav-bar>
 
     <b-carousel>
-      <b-carousel-slide v-for="(image, index) in this.banners" :key="index" :img-src="image.imgUrl"></b-carousel-slide>
+      <b-carousel-slide v-for="(image, index) in this.banners" :key="index" :img-src="$imageUrl(image.imageId)"></b-carousel-slide>
     </b-carousel>
 
     <!-- <recommendation-view :recommendations="recommendations"/> -->

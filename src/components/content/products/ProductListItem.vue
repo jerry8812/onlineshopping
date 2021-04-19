@@ -1,6 +1,6 @@
 <template>
   <div class="productItem">
-    <img :src="productItem.imgUrl" :alt="productItem.description">
+    <img :src="$imageUrl(productItem.imageId)" :alt="productItem.description">
     <div class="productInfo">
       <span class="brand">{{productItem.brand}}</span>
       <span>{{productItem.description}}</span>
