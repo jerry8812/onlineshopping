@@ -20,8 +20,6 @@ export default {
 
 <style scoped>
   .nav-bar {
-    position: relative;
-
     display: flex;
     line-height: 2.4rem;
     box-shadow: 0 1px 1px rgba(100, 100, 100, .1);

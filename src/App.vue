@@ -6,17 +6,12 @@
 </template>
 
 <script>
-  import MainTabbar from 'components/content/MainTabbar.vue'
+  import MainTabbar from 'components/content/mainTabBar/MainTabbar'
 
   export default {
     name: 'App',
     components: {
       MainTabbar
-    },
-    data() {
-      return {
-        
-      }
     }
   }
 </script>

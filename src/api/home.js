@@ -1,22 +1,26 @@
 import {request} from 'util/request'
 
-export function getTestData() {
-  return request({
-    url: "user/findAll",
-    method: 'get'
-  })
-}
-
 export function getBannerImages() {
   return request({
-    url: "images/banner",
+    url: "/image/groupImages/banner",
     method: 'get'
   })
 }
 
 export function getRecommendationImages() {
   return request({
-    url: 'images/recommendation',
+    url: '/image/groupImages/recommendation',
     method: 'get'
+  })
+}
+
+export function getProductsData(productTag, pageNum) {
+  return request({
+    url: '/product/tag',
+    method: 'get',
+    params: {
+      productTag,
+      pageNum
+    }
   })
 }
