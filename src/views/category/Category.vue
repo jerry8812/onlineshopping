@@ -1,15 +1,17 @@
 <template>
   <div>
-    <h1>Category</h1>
   </div>
 </template>
 
 <script>
-export default {
-  name: "Category"
-}
+  export default {
+    name: "Category",
+    data() {
+      return {
+      }
+    }
+  }
 </script>
 
 <style>
-
 </style>

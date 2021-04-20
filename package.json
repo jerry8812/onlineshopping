@@ -7,8 +7,10 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@better-scroll/core": "^2.3.0",
     "@popperjs/core": "^2.9.2",
     "axios": "^0.21.1",
+    "better-scroll": "^2.3.0",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",

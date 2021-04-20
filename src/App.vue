@@ -6,16 +6,20 @@
 </template>
 
 <script>
-  import MainTabbar from 'components/content/mainTabBar/MainTabbar'
+import MainTabbar from "components/content/mainTabBar/MainTabbar";
 
-  export default {
-    name: 'App',
-    components: {
-      MainTabbar
+export default {
+  name: "App",
+  data() {
+    return {
     }
+  },
+  components: {
+    MainTabbar
   }
+}
 </script>
 
 <style>
-  @import "assets/css/base.css";
+@import "assets/css/base.css";
 </style>
