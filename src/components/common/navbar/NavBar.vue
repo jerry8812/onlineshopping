@@ -19,26 +19,37 @@ export default {
 </script>
 
 <style scoped>
+
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+
   .nav-bar {
     display: flex;
-    line-height: 2.4rem;
+    line-height: 2.7rem;
     box-shadow: 0 1px 1px rgba(100, 100, 100, .1);
     text-align: center;
+    background-color: var(--color-tint);
+    color: rgb(255, 255, 255);
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    
+    z-index: 999;
   }
 
   .left, .right {
-    width: 15%;
+    width: 18%;
     padding-left: 0;
   }
   
   .middle {
     flex: 1;
     text-align: center;
-  }
-
-  .nav-bar img {
-    width: 100%;
-    height: auto;
-    background-color: red;
+    margin-bottom: 2px;
+    font-family: 'Kurale', serif;
+    /* font-family: 'Dancing Script', cursive; */
+    font-size: 1.44rem;
   }
 </style>

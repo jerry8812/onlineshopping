@@ -2,7 +2,7 @@
   <div id="home">
 
     <nav-bar class="home-nav">
-      <div slot="navbar-middle">Lady Clothing</div>
+      <div slot="navbar-middle">LADY CLOTHING</div>
     </nav-bar>
 
     <scroll class="home_scroll_content" 
@@ -83,13 +83,6 @@
         this.getProducts(this.currentTag)
         this.$refs.scroll.finishPullingUp()
         this.$refs.scroll.scroll.refresh()
-        // let timer = null
-        // if (timer) clearTimeout(timer)
-        // timer = setTimeout(() => {
-        //   this.getProducts(this.currentTag)
-        //   this.$refs.scroll.finishPullingUp()
-        //   this.$refs.scroll.scroll.refresh()
-        // }, 500)
       },
       /**
        * httpRequest
@@ -104,7 +97,6 @@
         getProductsData(productTag, pageNum).then(res => {
           this.products[productTag].productsList.push(...res.data.list)
           this.products[productTag].pageNum += 1
-          console.log(pageNum);
         })
       }
     },
@@ -121,24 +113,11 @@
 </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+  
 
   #home {
-    padding-top: 38px;
+    padding-top: 44px;
     height: 100vh;
-  }
-  .home-nav {
-    background-color: var(--color-tint);
-    color: rgb(255, 255, 255);
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.4rem;
-
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    
-    z-index: 999;
   }
   /* .tab-control {
      position: sticky; 
