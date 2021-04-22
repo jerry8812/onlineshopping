@@ -47,7 +47,7 @@
   }
   .login-register-tabs-item {
     width: 100%;
-    color: black;
+    color: rgb(14, 13, 13);
     font-size: 14px;
     font-weight: 600;
     border: 1px solid rgb(212, 209, 209);
