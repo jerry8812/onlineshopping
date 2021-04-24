@@ -1,6 +1,6 @@
 <template>
   <div id="register">
-    <b-form @submit.prevent="onsubmit" novalidate>
+    <b-form @submit.prevent="onsubmit($event)" novalidate>
       <div class="form-header">
         <span>Create an account to make purchases, 
           create wishlists and follow your favourite brandss!</span>
@@ -83,6 +83,7 @@
       <!-- dateOfBirth -->
       <b-form-group label="Birthday">
         <b-form-datepicker v-model="registerForm.dob"
+                           type="date"
                            class="mb-2"
                            locale="en"
                            placeholder="Choose a date"
@@ -126,14 +127,13 @@
       <div class="invalid-feedback">
           <span v-if="!$v.checkboxStatus.required && $v.checkboxStatus.$dirty">Accept terms is required</span>
       </div>
-      <b-button variant="primary" class="login-btn">CREATE ACCOUNT</b-button>
+      <button class="login-btn" @click="onsubmit($event)">CREATE ACCOUNT</button>
     </b-form>
   </div>
 </template>
 
 <script>
-  // import debounce from 'util/util'
-  import {getUserByEmail} from 'api/category.js'
+  import {getUserByEmail, register} from 'api/profile.js'
   import { required, email, minLength, sameAs } from 'vuelidate/lib/validators'
 
   const touchMap = new WeakMap()
@@ -169,6 +169,16 @@
           this.submitStatus = "ERROR"
         }else {
           this.submitStatus = "PENDING"
+          delete this.registerForm.repeatpassword
+          // this.registerForm.dob = formatDate(this.registerForm.dob, "yyyy-mm-dd")
+          const formData = JSON.stringify(this.registerForm)
+          register(formData).then(res => {
+            if(res.code === 200) {
+              this.$router.push("/home")
+            } else {
+
+            }
+          })
         }
       }
     },
@@ -193,7 +203,7 @@
         },
         password: {
           required,
-          minLength: minLength(8),
+          minLength: minLength(6),
         },
         repeatpassword: {
           sameAsPassword: sameAs('password')

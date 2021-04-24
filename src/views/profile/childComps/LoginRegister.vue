@@ -67,6 +67,10 @@
     margin-top: 15px;
     width: 100%;
     background-color: #42abc8;
+    line-height: 37px;
+    border-radius: 3px;
+    border-color: #42abc8;
+    color: white;
   }
   .loginactive {
     color: #42abc8;

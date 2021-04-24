@@ -32,7 +32,7 @@
     methods: {
       backClick() {
         console.log("back");
-        this.$router.back()
+        this.$router.go(-1)
       }
     }
   }

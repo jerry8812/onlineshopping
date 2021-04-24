@@ -2,7 +2,7 @@ import {request} from 'util/request'
 
 export function getBannerImages() {
   return request({
-    url: "/image/groupImages/banner",
+    url: "/images/groupImages/banner",
     method: 'get'
   })
 }
@@ -16,7 +16,7 @@ export function getRecommendationImages() {
 
 export function getProductsData(productTag, pageNum) {
   return request({
-    url: '/product/tag',
+    url: 'api/products/tag',
     method: 'get',
     params: {
       productTag,
