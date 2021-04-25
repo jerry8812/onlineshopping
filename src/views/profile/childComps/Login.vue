@@ -71,7 +71,9 @@
               this.errorMessage = res.message
               this.isLoginFailed = true
             } else {
-              this.$router.push("/home")
+              this.$store.commit('SET_NAME', res.data.email)
+              this.$store.commit('SET_PASSWORD', res.data.password)
+              this.$router.push('/home').catch(err => err)
             }
           })
         }
