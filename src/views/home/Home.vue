@@ -14,7 +14,7 @@
       <b-carousel>
         <b-carousel-slide v-for="(image, index) in this.banners"
                           :key="index" 
-                          :img-src="$imageUrl(image.imageId)">
+                          :img-src="$store.getters.imgUrl(image.imageId)">
         </b-carousel-slide>
       </b-carousel>
       <tab-control class="tab-control" 

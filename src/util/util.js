@@ -1,7 +1,3 @@
-export function getImageUrl(imageId) {
-  return "http://localhost:8080/images/" + imageId
-}
-
 export function debounce(func, delay) {
   let timer = null
   return function(...args) {

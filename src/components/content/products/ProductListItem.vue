@@ -1,6 +1,6 @@
 <template>
   <div class="productItem">
-    <img :src="$imageUrl(productItem.imageId)" :alt="productItem.description">
+    <img :src="$store.getters.imgUrl(productItem.imageId)" :alt="productItem.description">
     <div class="productInfo">
       <span class="brand">{{productItem.brand}}</span>
       <span>{{productItem.description}}</span>
